@@ -4,28 +4,28 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="emp1" class="lesson.Employee">
+	<bean id="emp1" class="lesson.Employee" scope="prototype">
 		<property name="empId" value="1" />
 		<property name="empName" value="AJ" />
 		<property name="empAge" value="21" />
 	</bean>
 
-	<bean id="emp2" class="lesson.Employee">
+	<bean id="emp2" class="lesson.Employee" scope="prototype">
 		<property name="empId" value="2" />
 		<property name="empName" value="CJ" />
 		<property name="empAge" value="21" />
 	</bean>
 
-	<bean id="emp3" class="lesson.Employee">
+	<bean id="emp3" class="lesson.Employee" scope="prototype">
 		<property name="empId" value="3" />
 		<property name="empName" value="DJ" />
 		<property name="empAge" value="21" />
 	</bean>
 
-	<bean id="team" class="lesson.Team">
-		<property name="emp1" ref="emp1" />
+	<bean id="team" class="lesson.Team" autowire="byName">
+		<!-- <property name="emp1" ref="emp1" />
 		<property name="emp2" ref="emp2" />
-		<property name="emp3" ref="emp3" />
+		<property name="emp3" ref="emp3" /> -->
 	</bean>
 
 	<bean id="teamList" class="lesson.TeamList">

@@ -5,6 +5,7 @@ public class Team {
 	private Employee emp1;
 	private Employee emp2;
 	private Employee emp3;
+	
 
 	public Employee getEmp1() {
 		return emp1;
@@ -29,11 +30,12 @@ public class Team {
 	public void setEmp3(Employee emp3) {
 		this.emp3 = emp3;
 	}
-	
-	public void showTeamMembers(){
-		System.out.println("1 :"+getEmp1().toString());
-		System.out.println("2 :"+getEmp2().toString());
-		System.out.println("3 :"+getEmp3().toString());
+
+	public void showTeamMembers() {
+
+		System.out.println("1 :" + getEmp1().toString());
+		System.out.println("2 :" + getEmp2().toString());
+		System.out.println("3 :" + getEmp3().toString());
 
 	}
 
