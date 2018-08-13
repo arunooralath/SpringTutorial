@@ -1,6 +1,9 @@
 package lesson;
 
-public class Team {
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class Team implements InitializingBean,DisposableBean,Group {
 
 	private Employee emp1;
 	private Employee emp2;
@@ -37,6 +40,18 @@ public class Team {
 		System.out.println("2 :" + getEmp2().toString());
 		System.out.println("3 :" + getEmp3().toString());
 
+	}
+
+//	INITIALIZING BEAN
+	public void afterPropertiesSet() throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println("init started");
+	}
+
+//	Disposing bean
+	public void destroy() throws Exception {
+		System.out.println("Disposing beans");
+		
 	}
 
 }

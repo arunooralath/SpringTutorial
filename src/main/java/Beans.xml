@@ -27,6 +27,10 @@
 		<property name="emp2" ref="emp2" />
 		<property name="emp3" ref="emp3" /> -->
 	</bean>
+	
+	<bean id="femaleTeam" class="lesson.FemaleTeam">
+		<property name="employee" ref="emp1" />		
+	</bean>
 
 	<bean id="teamList" class="lesson.TeamList">
 		<property name="employees">
